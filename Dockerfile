@@ -30,8 +30,6 @@ FROM runpod/worker-comfyui:5.5.1-base
 # Could not resolve custom node: VHS_LoadAudioUpload (unknown registry, no aux_id provided)
 # Could not resolve custom node: GetImageSizeAndCount (unknown registry, no aux_id provided)
 
-FROM runpod/worker-comfyui:5.5.1-base
-
 # install custom nodes
 RUN comfy node install comfyui-kjnodes
 RUN comfy node install ComfyUI-VideoHelperSuite
