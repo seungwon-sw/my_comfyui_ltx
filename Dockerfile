@@ -2,7 +2,7 @@
 FROM runpod/worker-comfyui:5.5.1-base
 
 # ComfyUI 최신 버전으로 업데이트
-RUN cd /comfyui && git pull
+RUN cd /comfyui && git fetch origin && git reset --hard origin/master
 
 # install custom nodes into comfyui (first node with --mode remote to fetch updated cache)
 # Could not resolve custom node: ImageResizeKJv2 (unknown registry, no aux_id provided)
