@@ -1,6 +1,9 @@
 # clean base image containing only comfyui, comfy-cli and comfyui-manager
 FROM runpod/worker-comfyui:5.5.1-base
 
+# ComfyUI 최신 버전으로 업데이트
+RUN cd /comfyui && git pull
+
 # install custom nodes into comfyui (first node with --mode remote to fetch updated cache)
 # Could not resolve custom node: ImageResizeKJv2 (unknown registry, no aux_id provided)
 # Could not resolve custom node: LTXAVTextEncoderLoader (unknown registry, no aux_id provided)
